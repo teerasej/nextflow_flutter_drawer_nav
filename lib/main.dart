@@ -37,42 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(_title),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            ListTile(
-              title: Text('Home'),
-              onTap: () {
-                setState(() {
-                  _currentPage = HomePage();
-                  _title = 'Home';
-                });
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Setting'),
-              onTap: () {
-                setState(() {
-                  _currentPage = SettingPage();
-                  _title = 'Setting';
-                });
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
       body: _currentPage,
     );
   }
