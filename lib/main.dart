@@ -37,6 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(_title),
       ),
+      drawer: Drawer(
+        child: Text('hello'),
+      ),
       body: _currentPage,
     );
   }
