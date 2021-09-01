@@ -52,11 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               title: Text('Home'),
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  _currentPage = HomePage();
+                  _title = 'Home';
+                });
+                Navigator.pop(context);
+              },
             ),
             ListTile(
               title: Text('Setting'),
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  _currentPage = SettingPage();
+                  _title = 'Setting';
+                });
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
